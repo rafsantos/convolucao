@@ -19,7 +19,7 @@ def index():
         mypixHoriz = int(request.form['pixHoriz'])
       except Exception as e:
         mypixHoriz = const.pixHoriz
-      if  1 < mypixHoriz <= 20:
+      if  1 < mypixHoriz <= 30:
         const.pixHoriz = mypixHoriz
       else:
         mypixHoriz = const.pixHoriz

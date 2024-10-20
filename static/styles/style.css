@@ -6,4 +6,12 @@
 p, form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-}   
+}  
+
+.entrada {
+    background-color: aqua;
+}
+
+.saida{
+    background-color: darkgoldenrod;
+}
