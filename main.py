@@ -17,10 +17,11 @@ def index():
       #Recebendo nova definição de tamanho do processamento
       try:
         mypixHoriz = int(request.form['pixHoriz'])
-        if mypixHoriz > 1:
-          const.pixHoriz = mypixHoriz 
       except Exception as e:
-        const.pixHoriz = 10
+        mypixHoriz = const.pixHoriz
+      if  1 < mypixHoriz <= 20:
+        const.pixHoriz = mypixHoriz
+      else:
         mypixHoriz = const.pixHoriz
       
       #Reprocessa a imagem com estes novos parâmetros
