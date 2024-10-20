@@ -1,4 +1,4 @@
-#!/Users/rafael/dev/tcc_py/venv/bin/python3
+#!/Users/rafael/dev/convolucao/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

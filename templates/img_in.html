@@ -2,39 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="templates/style.css">
-    <title>Convolução de Imagens - Rafael Lourenço dos Santos</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <title>Convolução de Imagens</title>
 </head>
 <body>
+  <div>
+    <p> Demonstração de propriedades da convolução aplicadas ao processamento de imagens</p>    
+    <p> Rafael Lourenço dos Santos </p>
+
+  </div>
+  
+<div class="formulario"> 
   <form method="post" action="/">
-      <label for="url">Image URL:</label>
-      <input type="text" name="url" id="url" required>
-      <button type="submit">Post</button>
+    <p>{{url}} {{mensagem_imagem}}</p>
+    <p>
+      <label for="url">Link para nova Imagem:</label>
+      <input type="text" name="url">
+    </p>
+    <p>
+      <label for="pixHoriz">Número de Pixels Horixontais: {{pixHoriz}}. Alterar: </label>
+      <input type="number" name="pixHoriz">
+    </p>
+    
+    <button type="submit">Enviar</button>
   </form>
-  <p> Rafael Lourenço dos Santos </p>
-  <p> {{url}} </p>
-  <div id="imagem">
-    <img src= 'static/images/img_in.png' >
-  </div>
-  <div id="imagem">
-    <img src= 'static/images/img_in_pix.png' >
-  </div>
-  <div id="imagem">
-     <img src= 'static/images/img_in_pixVal.png' >
-  </div>
-  <div id="imagem">
-     <img src= 'static/images/img_out.png' >
-  </div>
-  <div id="imagem">
-     <img src= 'static/images/img_out_pixVal.png' >
-  </div>
-
-  
- 
- 
+</div>
   
 
-
+<div class="entrada">
+  <img class="imagem" src= 'static/images/img_in.png' >
+  <img class="imagem" src= 'static/images/img_in_pix.png' >
+  <img class="imagem" src= 'static/images/img_in_pixVal.png' >
+</div>
+<div class="saida">
+     <img class="imagem" src= 'static/images/img_out.png' >
+     <img class="imagem" src= 'static/images/img_out_pixVal.png' >
+</div>
 
 </body>
 </html>

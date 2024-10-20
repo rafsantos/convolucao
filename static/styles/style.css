@@ -1,0 +1,9 @@
+.imagem {
+    width: 400px;
+    height: auto;
+}
+
+p, form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}   

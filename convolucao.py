@@ -16,20 +16,18 @@ filtro = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]], dtype=np.float32) / 9.0
 
 #Verifica se a url é válida e é uma imagem
 def url_eh_imagem(image_url):
- url_ok = True
- image_formats = ("image/png", "image/jpeg", "image/jpg")
- #Verifico se a URL é de uma imagem.
- try:
-  response = requests.get(image_url)
-  print("URL é válida e existe na internet")
-  if response.headers["content-type"] in image_formats:
-    print("requests diz: É uma URL de uma imagem no Header")
-    return True
+  url_ok = True
+  image_formats = ("image/png", "image/jpeg", "image/jpg")
+  #Verifico se a URL é de uma imagem.
+  try:
+    response = requests.get(image_url)
+    if response.headers["content-type"] in image_formats:
+      const.url_valida = True
+      return True
+  except Exception as e:
+    const.url_valida = False
+    return False
 
- except requests.ConnectionError as exception:
-  print("URL não existe na internet")
-  return False
- 
 # Função convolução
 def convolve(image, filter):
   image = np.array(image)
