@@ -14,7 +14,7 @@ import validators
 
 filtro = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]], dtype=np.float32) / 9.0
 
-#Verifica se a url é válida e é uma imagem
+#Verifica se a url é válida e uma imagem
 def url_eh_imagem(image_url):
   url_ok = True
   image_formats = ("image/png", "image/jpeg", "image/jpg")
